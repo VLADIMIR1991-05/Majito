@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Memoria en Cenizas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-shell">
+    <section class="stage" aria-label="Escena del juego">
+      <canvas id="scene" width="1280" height="720" aria-hidden="true"></canvas>
+      <div class="stage-vignette"></div>
+      <header class="topbar">
+        <div>
+          <p class="kicker">Adaptación interactiva privada</p>
+          <h1>Memoria en Cenizas</h1>
+        </div>
+        <button id="restartBtn" class="icon-button" type="button" title="Reiniciar partida" aria-label="Reiniciar partida">↻</button>
+      </header>
+
+      <section class="hud" aria-label="Estado del personaje">
+        <div class="meter"><span>Duda</span><strong id="doubtVal">0</strong><i id="doubtBar"></i></div>
+        <div class="meter"><span>Sospecha</span><strong id="suspicionVal">0</strong><i id="suspicionBar"></i></div>
+        <div class="meter"><span>Memoria</span><strong id="memoryVal">0</strong><i id="memoryBar"></i></div>
+        <div class="meter"><span>Riesgo</span><strong id="riskVal">0</strong><i id="riskBar"></i></div>
+      </section>
+
+      <section id="panel" class="panel" aria-live="polite">
+        <p id="chapter" class="chapter"></p>
+        <h2 id="title"></h2>
+        <p id="text"></p>
+        <p id="quote" class="quote"></p>
+        <div id="miniGame" class="mini-game"></div>
+        <div id="choices" class="choices"></div>
+      </section>
+
+      <aside class="inventory" aria-label="Fragmentos encontrados">
+        <h2>Fragmentos</h2>
+        <ul id="fragments"></ul>
+      </aside>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
