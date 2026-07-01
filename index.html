@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guardianes de los Libros</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-shell">
+    <section class="stage" aria-label="Juego Guardianes de los Libros">
+      <canvas id="scene" width="1280" height="720" aria-hidden="true"></canvas>
+      <div class="stage-softener"></div>
+
+      <header class="topbar">
+        <div>
+          <p class="kicker">Aventura para escuela</p>
+          <h1>Guardianes de los Libros</h1>
+        </div>
+        <div class="toolbar" aria-label="Controles del juego">
+          <button id="soundBtn" class="icon-button" type="button" title="Activar o apagar sonido" aria-label="Activar o apagar sonido">♪</button>
+          <button id="restartBtn" class="icon-button" type="button" title="Reiniciar partida" aria-label="Reiniciar partida">↻</button>
+        </div>
+      </header>
+
+      <section class="scoreboard" aria-label="Progreso del juego">
+        <div class="meter"><span>Ideas claras</span><strong id="ideasVal">0</strong><i id="ideasBar"></i></div>
+        <div class="meter"><span>Amistad</span><strong id="kindnessVal">0</strong><i id="kindnessBar"></i></div>
+        <div class="meter"><span>Lectura</span><strong id="readingVal">0</strong><i id="readingBar"></i></div>
+        <div class="meter"><span>Valentía</span><strong id="braveryVal">0</strong><i id="braveryBar"></i></div>
+      </section>
+
+      <section id="panel" class="panel" aria-live="polite">
+        <p id="chapter" class="chapter"></p>
+        <h2 id="title"></h2>
+        <p id="text"></p>
+        <p id="goal" class="goal"></p>
+        <div id="miniGame" class="mini-game"></div>
+        <div id="choices" class="choices"></div>
+      </section>
+
+      <aside class="notebook" aria-label="Cuaderno de logros">
+        <h2>Cuaderno</h2>
+        <ul id="fragments"></ul>
+      </aside>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
